@@ -8,7 +8,7 @@ await page.goto("https://demo.automationtesting.in/Alerts.html");
 page.on('dialog', async (Dialog)=>{
 console.log(Dialog.message());
 console.log(Dialog.type());
-await page.waitForTimeout(5000)
+await page.waitForTimeout(2000)
 await Dialog.accept();
 
 });
