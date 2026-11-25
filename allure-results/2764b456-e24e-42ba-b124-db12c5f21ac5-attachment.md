@@ -1,0 +1,623 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: frameshomework.spec.js >> Validate dropdown
+- Location: tests\frameshomework.spec.js:3:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('//span[text ()="Documentation"]')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - banner [ref=e6]:
+        - generic [ref=e7]:
+          - link [ref=e8] [cursor=pointer]:
+            - /url: https://practice-automation.com/
+            - img "automateNow Logo" [ref=e9]
+          - navigation "Top Menu" [ref=e10]:
+            - list [ref=e11]:
+              - listitem [ref=e12]:
+                - link "Blog" [ref=e13] [cursor=pointer]:
+                  - /url: https://automatenow.io/
+              - listitem [ref=e14]:
+                - link "YouTube" [ref=e15] [cursor=pointer]:
+                  - /url: https://www.youtube.com/c/automateNow
+      - generic [ref=e17]:
+        - heading "Iframes" [level=1] [ref=e18]
+        - navigation [ref=e19]:
+          - generic [ref=e20]:
+            - link "Home" [ref=e22] [cursor=pointer]:
+              - /url: https://practice-automation.com/
+            - text: » Iframes
+    - main [ref=e26]:
+      - article [ref=e28]:
+        - generic [ref=e29]:
+          - paragraph [ref=e30]: An iframe (short for “inline frame”) is an HTML element that allows you to embed another HTML document within the current document. Iframes are commonly used to embed external content such as videos, maps, or other web pages (as seen here) into a web page without affecting the parent document.
+          - paragraph [ref=e31]:
+            - text: Use these examples to learn
+            - link "how to handle iframes in test automation" [ref=e32] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=4spQdcXWtzQ
+            - text: .
+          - paragraph [ref=e33]: I’m an iframe
+          - iframe [ref=e34]:
+            - generic [ref=f1e2]:
+              - region "Skip to main content":
+                - link "Skip to main content" [ref=f1e3] [cursor=pointer]:
+                  - /url: "#__docusaurus_skipToContent_fallback"
+              - navigation "Main" [ref=f1e4]:
+                - generic [ref=f1e5]:
+                  - generic [ref=f1e6]:
+                    - link "Playwright logo Playwright" [ref=f1e7] [cursor=pointer]:
+                      - /url: /
+                      - img "Playwright logo" [ref=f1e9]
+                      - generic [ref=f1e10]: Playwright
+                    - link "Docs" [ref=f1e11] [cursor=pointer]:
+                      - /url: /docs/intro
+                    - link "MCP" [ref=f1e12] [cursor=pointer]:
+                      - /url: /mcp/introduction
+                    - link "CLI" [ref=f1e13] [cursor=pointer]:
+                      - /url: /agent-cli/introduction
+                    - link "API" [ref=f1e14] [cursor=pointer]:
+                      - /url: /docs/api/class-playwright
+                    - button "Node.js" [ref=f1e16] [cursor=pointer]
+                  - generic [ref=f1e17]:
+                    - link "GitHub repository" [ref=f1e18] [cursor=pointer]:
+                      - /url: https://github.com/microsoft/playwright
+                    - link "Discord server" [ref=f1e19] [cursor=pointer]:
+                      - /url: https://aka.ms/playwright/discord
+                    - button "Switch between dark and light mode (currently system mode)" [ref=f1e21] [cursor=pointer]
+                    - button "Search (Control+k)" [ref=f1e25] [cursor=pointer]:
+                      - generic [ref=f1e26]: Search
+                      - generic [ref=f1e31]:
+                        - generic [ref=f1e32]: Ctrl
+                        - generic [ref=f1e33]: K
+              - generic [ref=f1e34]:
+                - banner [ref=f1e35]:
+                  - generic [ref=f1e36]:
+                    - heading "Playwright enables reliable web automation for testing, scripting, and AI agents." [level=1] [ref=f1e37]
+                    - paragraph [ref=f1e38]:
+                      - text: One API to drive Chromium, Firefox, and WebKit — in your tests, your scripts, and your agent workflows. Available for
+                      - link "TypeScript" [ref=f1e39] [cursor=pointer]:
+                        - /url: https://playwright.dev/docs/intro
+                      - text: ","
+                      - link "Python" [ref=f1e40] [cursor=pointer]:
+                        - /url: https://playwright.dev/python/docs/intro
+                      - text: ","
+                      - link ".NET" [ref=f1e41] [cursor=pointer]:
+                        - /url: https://playwright.dev/dotnet/docs/intro
+                      - text: ", and"
+                      - link "Java" [ref=f1e42] [cursor=pointer]:
+                        - /url: https://playwright.dev/java/docs/intro
+                      - text: .
+                    - generic [ref=f1e43]:
+                      - link "Get started" [ref=f1e44] [cursor=pointer]:
+                        - /url: /docs/intro
+                      - generic [ref=f1e45]:
+                        - link "Star microsoft/playwright on GitHub" [ref=f1e46] [cursor=pointer]:
+                          - /url: https://github.com/microsoft/playwright
+                          - text: Star
+                        - link "99k+ stargazers on GitHub" [ref=f1e48] [cursor=pointer]:
+                          - /url: https://github.com/microsoft/playwright/stargazers
+                          - text: 99k+
+                - main [ref=f1e49]:
+                  - generic [ref=f1e52]:
+                    - generic [ref=f1e53]:
+                      - heading "Playwright Test" [level=3] [ref=f1e54]
+                      - paragraph [ref=f1e55]: Full-featured test runner with auto-waiting, assertions, tracing, and parallelism across Chromium, Firefox, and WebKit.
+                      - code [ref=f1e56]: npm init playwright@latest
+                      - link "Testing documentation" [ref=f1e58] [cursor=pointer]:
+                        - /url: /docs/intro
+                    - generic [ref=f1e59]:
+                      - heading "Playwright CLI" [level=3] [ref=f1e60]
+                      - paragraph [ref=f1e61]: Token-efficient browser automation for coding agents like Claude Code and GitHub Copilot. Skill-based workflows without large context overhead.
+                      - code [ref=f1e62]: npm i -g @playwright/cli@latest
+                      - link "CLI documentation" [ref=f1e64] [cursor=pointer]:
+                        - /url: /docs/getting-started-cli
+                    - generic [ref=f1e65]:
+                      - heading "Playwright MCP" [level=3] [ref=f1e66]
+                      - paragraph [ref=f1e67]: Model Context Protocol server that gives AI agents full browser control through structured accessibility snapshots.
+                      - code [ref=f1e68]: npx @playwright/mcp@latest
+                      - link "MCP documentation" [ref=f1e70] [cursor=pointer]:
+                        - /url: /docs/getting-started-mcp
+                  - generic [ref=f1e72]:
+                    - heading "Built for testing" [level=2] [ref=f1e73]
+                    - generic [ref=f1e75]:
+                      - generic [ref=f1e76]:
+                        - heading "Auto-wait and web-first assertions" [level=4] [ref=f1e77]
+                        - paragraph [ref=f1e78]: Playwright waits for elements to be actionable before performing actions. Assertions automatically retry until conditions are met. No artificial timeouts, no flaky tests.
+                        - heading "Test isolation" [level=4] [ref=f1e79]
+                        - paragraph [ref=f1e80]: Each test gets a fresh browser context — equivalent to a brand new browser profile. Full isolation with near-zero overhead. Save authentication state once and reuse it across tests.
+                      - generic [ref=f1e81]:
+                        - heading "Resilient locators" [level=4] [ref=f1e82]
+                        - paragraph [ref=f1e83]:
+                          - text: "Find elements with selectors that mirror how users see the page:"
+                          - code [ref=f1e84]: getByRole
+                          - text: ","
+                          - code [ref=f1e85]: getByLabel
+                          - text: ","
+                          - code [ref=f1e86]: getByPlaceholder
+                          - text: ","
+                          - code [ref=f1e87]: getByTestId
+                          - text: . No brittle CSS paths.
+                        - heading "Parallelism and sharding" [level=4] [ref=f1e88]
+                        - paragraph [ref=f1e89]: Tests run in parallel by default across all configured browsers. Shard across multiple machines for faster CI. Full cross-browser coverage on every commit.
+                  - generic [ref=f1e91]:
+                    - heading "Built for AI agents" [level=2] [ref=f1e92]
+                    - generic [ref=f1e94]:
+                      - generic [ref=f1e95]:
+                        - heading "Accessibility snapshots, not screenshots" [level=4] [ref=f1e96]
+                        - paragraph [ref=f1e97]: Agents interact with pages through structured accessibility trees — element roles, names, and refs. Deterministic and unambiguous, no vision models required.
+                        - heading "MCP server" [level=4] [ref=f1e98]
+                        - paragraph [ref=f1e99]:
+                          - text: Drop-in
+                          - link "Model Context Protocol" [ref=f1e100] [cursor=pointer]:
+                            - /url: https://modelcontextprotocol.io
+                          - text: server for VS Code, Cursor, Claude Desktop, Windsurf, and any MCP client. Full browser control through standard tool calls.
+                      - generic [ref=f1e101]:
+                        - heading "CLI for coding agents" [level=4] [ref=f1e102]
+                        - paragraph [ref=f1e103]: Token-efficient command-line interface with installable skills. Purpose-built for Claude Code, GitHub Copilot, and similar coding agents that need to balance browser automation with large codebases.
+                        - heading "Session monitoring" [level=4] [ref=f1e104]
+                        - paragraph [ref=f1e105]: Visual dashboard with live screencast previews of all running browser sessions. Click any session to zoom in and take control.
+                  - generic [ref=f1e107]:
+                    - heading "Powerful tooling" [level=2] [ref=f1e108]
+                    - generic [ref=f1e110]:
+                      - generic [ref=f1e111]:
+                        - heading [level=4] [ref=f1e112]:
+                          - link "Test generator" [ref=f1e113] [cursor=pointer]:
+                            - /url: docs/codegen
+                        - paragraph [ref=f1e114]: Record your actions in the browser and Playwright writes the test code. Generate assertions from the recording toolbar. Pick locators by clicking on elements.
+                      - generic [ref=f1e115]:
+                        - heading [level=4] [ref=f1e116]:
+                          - link "Trace Viewer" [ref=f1e117] [cursor=pointer]:
+                            - /url: docs/trace-viewer-intro
+                        - paragraph [ref=f1e118]: Full timeline of test execution with DOM snapshots, network requests, console logs, and screenshots at every step. Investigate failures without re-running.
+                      - generic [ref=f1e119]:
+                        - heading [level=4] [ref=f1e120]:
+                          - link "VS Code extension" [ref=f1e121] [cursor=pointer]:
+                            - /url: docs/getting-started-vscode
+                        - paragraph [ref=f1e122]: Run, debug, and generate tests directly in the editor. Set breakpoints, live-inspect locators in the browser, and view full execution traces in the sidebar.
+                  - generic [ref=f1e124]:
+                    - img "Chromium, Firefox, WebKit" [ref=f1e125]
+                    - paragraph [ref=f1e126]:
+                      - text: Any browser. Any platform. Chromium, Firefox, and WebKit on Linux, macOS, and Windows. Headless and headed. Also available for
+                      - link "Python" [ref=f1e127] [cursor=pointer]:
+                        - /url: https://playwright.dev/python/docs/intro
+                      - text: ","
+                      - link ".NET" [ref=f1e128] [cursor=pointer]:
+                        - /url: https://playwright.dev/dotnet/docs/intro
+                      - text: ", and"
+                      - link "Java" [ref=f1e129] [cursor=pointer]:
+                        - /url: https://playwright.dev/java/docs/intro
+                      - text: .
+                  - generic [ref=f1e133]:
+                    - heading "Chosen by companies and open source projects" [level=2] [ref=f1e134]
+                    - list [ref=f1e135]:
+                      - listitem [ref=f1e136]:
+                        - link [ref=f1e137] [cursor=pointer]:
+                          - /url: https://code.visualstudio.com
+                          - img "VS Code" [ref=f1e138]
+                      - listitem [ref=f1e139]:
+                        - link [ref=f1e140] [cursor=pointer]:
+                          - /url: https://bing.com
+                          - img "Bing" [ref=f1e141]
+                      - listitem [ref=f1e142]:
+                        - link [ref=f1e143] [cursor=pointer]:
+                          - /url: https://outlook.com
+                          - img "Outlook" [ref=f1e144]
+                      - listitem [ref=f1e145]:
+                        - link [ref=f1e146] [cursor=pointer]:
+                          - /url: https://www.hotstar.com/
+                          - img "Disney+ Hotstar" [ref=f1e147]
+                      - listitem [ref=f1e148]:
+                        - link [ref=f1e149] [cursor=pointer]:
+                          - /url: https://github.com/mui-org/material-ui
+                          - img "Material UI" [ref=f1e150]
+                      - listitem [ref=f1e151]:
+                        - link [ref=f1e152] [cursor=pointer]:
+                          - /url: https://github.com/ing-bank/lion
+                          - img "ING" [ref=f1e153]
+                      - listitem [ref=f1e154]:
+                        - link [ref=f1e155] [cursor=pointer]:
+                          - /url: https://github.com/adobe/spectrum-web-components
+                          - img "Adobe" [ref=f1e156]
+                      - listitem [ref=f1e157]:
+                        - link [ref=f1e158] [cursor=pointer]:
+                          - /url: https://github.com/react-navigation/react-navigation
+                          - img "React Navigation" [ref=f1e159]
+                      - listitem [ref=f1e160]:
+                        - link [ref=f1e161] [cursor=pointer]:
+                          - /url: https://accessibilityinsights.io/
+                          - img "Accessibility Insights" [ref=f1e162]
+              - contentinfo [ref=f1e163]:
+                - generic [ref=f1e164]:
+                  - generic [ref=f1e165]:
+                    - generic [ref=f1e166]:
+                      - generic [ref=f1e167]: Learn
+                      - list [ref=f1e168]:
+                        - listitem [ref=f1e169]:
+                          - link "Getting started" [ref=f1e170] [cursor=pointer]:
+                            - /url: /docs/intro
+                        - listitem [ref=f1e171]:
+                          - link [ref=f1e172] [cursor=pointer]:
+                            - /url: https://learn.microsoft.com/en-us/training/modules/build-with-playwright/
+                            - text: Playwright Training
+                            - img "(opens in new tab)" [ref=f1e173]
+                        - listitem [ref=f1e175]:
+                          - link "Learn Videos" [ref=f1e176] [cursor=pointer]:
+                            - /url: /community/learn-videos
+                        - listitem [ref=f1e177]:
+                          - link "Feature Videos" [ref=f1e178] [cursor=pointer]:
+                            - /url: /community/feature-videos
+                    - generic [ref=f1e179]:
+                      - generic [ref=f1e180]: Community
+                      - list [ref=f1e181]:
+                        - listitem [ref=f1e182]:
+                          - link [ref=f1e183] [cursor=pointer]:
+                            - /url: https://stackoverflow.com/questions/tagged/playwright
+                            - text: Stack Overflow
+                            - img "(opens in new tab)" [ref=f1e184]
+                        - listitem [ref=f1e186]:
+                          - link [ref=f1e187] [cursor=pointer]:
+                            - /url: https://aka.ms/playwright/discord
+                            - text: Discord
+                            - img "(opens in new tab)" [ref=f1e188]
+                        - listitem [ref=f1e190]:
+                          - link [ref=f1e191] [cursor=pointer]:
+                            - /url: https://x.com/playwrightweb
+                            - text: X
+                            - img "(opens in new tab)" [ref=f1e192]
+                        - listitem [ref=f1e194]:
+                          - link [ref=f1e195] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/playwrightweb
+                            - text: LinkedIn
+                            - img "(opens in new tab)" [ref=f1e196]
+                    - generic [ref=f1e198]:
+                      - generic [ref=f1e199]: More
+                      - list [ref=f1e200]:
+                        - listitem [ref=f1e201]:
+                          - link [ref=f1e202] [cursor=pointer]:
+                            - /url: https://github.com/microsoft/playwright
+                            - text: GitHub
+                            - img "(opens in new tab)" [ref=f1e203]
+                        - listitem [ref=f1e205]:
+                          - link [ref=f1e206] [cursor=pointer]:
+                            - /url: https://www.youtube.com/channel/UC46Zj8pDH5tDosqm1gd7WTg
+                            - text: YouTube
+                            - img "(opens in new tab)" [ref=f1e207]
+                        - listitem [ref=f1e209]:
+                          - link [ref=f1e210] [cursor=pointer]:
+                            - /url: https://dev.to/playwright
+                            - text: Blog
+                            - img "(opens in new tab)" [ref=f1e211]
+                        - listitem [ref=f1e213]:
+                          - link "Ambassadors" [ref=f1e214] [cursor=pointer]:
+                            - /url: /community/ambassadors
+                        - listitem [ref=f1e215]:
+                          - link [ref=f1e216] [cursor=pointer]:
+                            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+                            - text: Microsoft Privacy Statement
+                            - img "(opens in new tab)" [ref=f1e217]
+                  - generic [ref=f1e219]: Copyright © 2026 Microsoft
+          - paragraph [ref=e36]: Me too!
+          - iframe [ref=e37]:
+            - generic [ref=f2e1]:
+              - generic [aria-hidden] [ref=f2e2]: "For AI agents: the site's llms.txt is at /llms.txt. This page has a Markdown version at /index.md."
+              - banner:
+                - navigation [ref=f2e3]:
+                  - link [ref=f2e4] [cursor=pointer]:
+                    - /url: /
+                    - img "Selenium logo green" [ref=f2e6]
+                  - generic [ref=f2e17]:
+                    - list [ref=f2e18]:
+                      - listitem [ref=f2e19]:
+                        - button "About" [ref=f2e20] [cursor=pointer]
+                      - listitem [ref=f2e21]:
+                        - link "Downloads" [ref=f2e22] [cursor=pointer]:
+                          - /url: /downloads
+                      - listitem [ref=f2e23]:
+                        - link "Documentation" [ref=f2e24] [cursor=pointer]:
+                          - /url: /documentation
+                      - listitem [ref=f2e25]:
+                        - link "Projects" [ref=f2e26] [cursor=pointer]:
+                          - /url: /projects
+                      - listitem [ref=f2e27]:
+                        - link "Support" [ref=f2e28] [cursor=pointer]:
+                          - /url: /support
+                      - listitem [ref=f2e29]:
+                        - link "Blog" [ref=f2e30] [cursor=pointer]:
+                          - /url: /blog
+                      - listitem [ref=f2e31]:
+                        - 'button "Code example language: Java" [ref=f2e32] [cursor=pointer]': Java
+                      - listitem [ref=f2e34]:
+                        - generic [ref=f2e35]:
+                          - button "English" [ref=f2e36] [cursor=pointer]
+                          - text: 
+                    - button "Search (Ctrl+K)" [ref=f2e40] [cursor=pointer]:
+                      - generic [ref=f2e41]: Search
+                      - generic [ref=f2e45]: K
+              - generic [ref=f2e50]:
+                - main [ref=f2e51]:
+                  - generic [ref=f2e55]:
+                    - heading "Automate any browser, from any language." [level=1] [ref=f2e56]
+                    - paragraph [ref=f2e57]:
+                      - text: Selenium is a browser automation tool that gives you full control over Chrome, Firefox, Edge and Safari. Write your scripts in Java, Python, C#, Ruby, JavaScript or Kotlin using the official
+                      - link "W3C WebDriver standard" [ref=f2e58] [cursor=pointer]:
+                        - /url: https://w3c.github.io/webdriver-bidi/
+                      - text: .
+                    - generic [ref=f2e59]:
+                      - link "Get started" [ref=f2e60] [cursor=pointer]:
+                        - /url: /documentation/webdriver/getting_started/
+                      - link "Using AI agents" [ref=f2e62] [cursor=pointer]:
+                        - /url: /documentation/ai_agents/
+                    - paragraph [ref=f2e64]: "Works out of the box: Selenium downloads what it needs to talk to your browser, so there is nothing to install by hand."
+                  - generic [ref=f2e68]:
+                    - heading "Install Selenium and run your first script" [level=2] [ref=f2e69]
+                    - paragraph [ref=f2e70]: Add the Selenium package for your language, then run the script below. It opens Chrome, loads a page and closes the browser again.
+                    - tablist "Code example language" [ref=f2e71]:
+                      - tab "Java" [selected] [ref=f2e72] [cursor=pointer]
+                      - tab "Python" [ref=f2e73] [cursor=pointer]
+                      - tab "CSharp" [ref=f2e74] [cursor=pointer]
+                      - tab "Ruby" [ref=f2e75] [cursor=pointer]
+                      - tab "JavaScript" [ref=f2e76] [cursor=pointer]
+                      - tab "Kotlin" [ref=f2e77] [cursor=pointer]
+                    - tabpanel "Java" [ref=f2e79]:
+                      - paragraph [ref=f2e80]:
+                        - text: "Java: add"
+                        - code [ref=f2e81]: org.seleniumhq.selenium:selenium-java
+                        - text: "to your build, then run:"
+                      - code [ref=f2e85]:
+                        - text: package
+                        - generic [ref=f2e86]: dev.selenium.hello
+                        - text: ; import
+                        - generic [ref=f2e87]: org.openqa.selenium.
+                        - text: WebDriver; import
+                        - generic [ref=f2e88]: org.openqa.selenium.chrome.
+                        - text: "ChromeDriver; public class HelloSelenium { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); driver.get(\"https://selenium.dev\"); driver.quit(); } }"
+                      - link [ref=f2e90] [cursor=pointer]:
+                        - /url: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java
+                        - strong [ref=f2e92]: View on GitHub
+                    - paragraph [ref=f2e93]:
+                      - text: Need more detail? Follow the
+                      - link "Getting Started guide" [ref=f2e94] [cursor=pointer]:
+                        - /url: /documentation/webdriver/getting_started/
+                      - text: .
+                  - heading "Pick your tool" [level=2] [ref=f2e97]
+                  - generic [ref=f2e100]:
+                    - generic [ref=f2e102]:
+                      - generic [ref=f2e103]:
+                        - img "Selenium WebDriver" [ref=f2e106]
+                        - heading "Selenium WebDriver" [level=4] [ref=f2e109]
+                        - paragraph
+                        - paragraph [ref=f2e110]:
+                          - strong [ref=f2e111]: Use this when
+                          - text: you want to drive a browser from code in your own language. WebDriver is a collection of language-specific bindings that control a real browser the way a user would, and it is the foundation for everything else Selenium does.
+                        - paragraph
+                      - link "Read more" [ref=f2e114] [cursor=pointer]:
+                        - /url: /documentation/webdriver/
+                    - generic [ref=f2e117]:
+                      - generic [ref=f2e118]:
+                        - img "Selenium Grid" [ref=f2e121]
+                        - heading "Selenium Grid" [level=4] [ref=f2e123]
+                        - paragraph
+                        - paragraph [ref=f2e124]:
+                          - strong [ref=f2e125]: Use this when
+                          - text: you need to run your WebDriver tests on several machines, browsers and operating systems at once. Grid distributes sessions from a central point so you can run against a vast combination of environments in parallel.
+                        - paragraph
+                      - link "Read more" [ref=f2e128] [cursor=pointer]:
+                        - /url: /documentation/grid/
+                  - generic [ref=f2e131]:
+                    - heading "Used by projects and teams including" [level=2] [ref=f2e132]
+                    - paragraph [ref=f2e133]:
+                      - link "34,613 GitHub stars" [ref=f2e134] [cursor=pointer]:
+                        - /url: https://github.com/SeleniumHQ/selenium/stargazers
+                    - list [ref=f2e136]:
+                      - listitem:
+                        - link "Wikimedia Foundation":
+                          - /url: https://www.wikimedia.org/
+                          - img "Wikimedia Foundation"
+                      - listitem:
+                        - link "OpenStack":
+                          - /url: https://www.openstack.org/
+                          - img "OpenStack"
+                      - listitem:
+                        - link "Jenkins":
+                          - /url: https://www.jenkins.io/
+                          - img "Jenkins"
+                      - listitem:
+                        - link "Drupal":
+                          - /url: https://www.drupal.org/
+                          - img "Drupal"
+                      - listitem [ref=f2e137]:
+                        - link "Moodle" [ref=f2e138] [cursor=pointer]:
+                          - /url: https://moodle.org/
+                      - listitem [ref=f2e139]:
+                        - link "Mozilla" [ref=f2e140] [cursor=pointer]:
+                          - /url: https://www.mozilla.org/
+                      - listitem [ref=f2e141]:
+                        - link "Progress" [ref=f2e142] [cursor=pointer]:
+                          - /url: https://www.progress.com/
+                      - listitem [ref=f2e143]:
+                        - link "trivago" [ref=f2e144] [cursor=pointer]:
+                          - /url: https://www.trivago.com/
+                    - paragraph [ref=f2e145]:
+                      - text: Does your organisation use Selenium?
+                      - link "Add your logo" [ref=f2e146] [cursor=pointer]:
+                        - /url: https://github.com/SeleniumHQ/seleniumhq.github.io/issues/new?template=used_by_logo.yml
+                    - paragraph [ref=f2e147]:
+                      - text: Logos are trademarks of their respective owners. Showing them does not mean these organisations endorse Selenium. The Wikimedia Foundation logo is a trademark of the Wikimedia Foundation and is used with the permission of the Wikimedia Foundation. We are not endorsed by or affiliated with the Wikimedia Foundation. Jenkins logo by the
+                      - link "Jenkins project" [ref=f2e148] [cursor=pointer]:
+                        - /url: https://jenkins.io/
+                      - text: ","
+                      - link "CC BY-SA 3.0" [ref=f2e149] [cursor=pointer]:
+                        - /url: https://creativecommons.org/licenses/by-sa/3.0/
+                      - text: .
+                  - heading "Development Partners" [level=2] [ref=f2e151]
+                  - generic [ref=f2e152]:
+                    - link [ref=f2e154] [cursor=pointer]:
+                      - /url: https://www.browserstack.com/automate?utm_campaign=open-source-sponsor&utm_campaigncode=701OW000009sQwVYAU&utm_medium=partnered&utm_source=seleniumorg
+                      - img "BrowserStack" [ref=f2e155]
+                    - link [ref=f2e157] [cursor=pointer]:
+                      - /url: https://www.testmuai.com
+                      - img "TestMu AI (formerly LambdaTest)" [ref=f2e158]
+                  - heading "Selenium Level Sponsors" [level=2] [ref=f2e160]
+                  - generic [ref=f2e161]:
+                    - link [ref=f2e163] [cursor=pointer]:
+                      - /url: https://brightdata.com/?utm_source=brand&utm_campaign=brnd-mkt_partners_selenium
+                      - img "Bright Data" [ref=f2e164]
+                    - link [ref=f2e166] [cursor=pointer]:
+                      - /url: https://applitools.com/
+                      - img "Applitools" [ref=f2e167]
+                    - link [ref=f2e169] [cursor=pointer]:
+                      - /url: https://www.thordata.com/?ls=waOicIkB&lk=selenium
+                      - img "Thordata" [ref=f2e170]
+                  - heading "News" [level=2] [ref=f2e173]
+                  - generic [ref=f2e174]:
+                    - generic [ref=f2e177]:
+                      - heading "Selenium 4.54 Released!" [level=4] [ref=f2e178]
+                      - paragraph [ref=f2e179]: Monday, November 23, 2026
+                      - paragraph [ref=f2e180]:
+                        - text: By Diego Molina
+                        - link "@diemol" [ref=f2e181] [cursor=pointer]:
+                          - /url: https://www.diemol.com
+                    - generic [ref=f2e184]:
+                      - paragraph [ref=f2e185]: Today we’re happy to announce that Selenium 4.54 has been released!
+                      - link "Read More" [ref=f2e186] [cursor=pointer]:
+                        - /url: https://www.selenium.dev/blog/2026/selenium-4-54-released/
+                  - generic [ref=f2e188]:
+                    - generic [ref=f2e191]:
+                      - heading "Selenium 4.53 Released!" [level=4] [ref=f2e192]
+                      - paragraph [ref=f2e193]: Tuesday, November 17, 2026
+                      - paragraph [ref=f2e194]:
+                        - text: By Diego Molina
+                        - link "@diemol" [ref=f2e195] [cursor=pointer]:
+                          - /url: https://www.diemol.com
+                    - generic [ref=f2e198]:
+                      - paragraph [ref=f2e199]: Today we’re happy to announce that Selenium 4.53 has been released!
+                      - link "Read More" [ref=f2e200] [cursor=pointer]:
+                        - /url: https://www.selenium.dev/blog/2026/selenium-4-53-released/
+                  - generic [ref=f2e202]:
+                    - generic [ref=f2e205]:
+                      - heading "Selenium 4.52 Released!" [level=4] [ref=f2e206]
+                      - paragraph [ref=f2e207]: Thursday, October 29, 2026
+                      - paragraph [ref=f2e208]:
+                        - text: By Diego Molina
+                        - link "@diemol" [ref=f2e209] [cursor=pointer]:
+                          - /url: https://www.diemol.com
+                    - generic [ref=f2e212]:
+                      - paragraph [ref=f2e213]: Today we’re happy to announce that Selenium 4.52 has been released!
+                      - link "Read More" [ref=f2e214] [cursor=pointer]:
+                        - /url: https://www.selenium.dev/blog/2026/selenium-4-52-released/
+                  - link "More news" [ref=f2e218] [cursor=pointer]:
+                    - /url: /blog
+                  - generic [ref=f2e222]:
+                    - heading "Support the Selenium Project" [level=2] [ref=f2e223]
+                    - paragraph [ref=f2e224]: Learn more or view the full list of sponsors.
+                    - link "Learn more" [ref=f2e226] [cursor=pointer]:
+                      - /url: /sponsors
+                  - generic [ref=f2e230]:
+                    - heading "Donate to Selenium" [level=2] [ref=f2e231]
+                    - heading [level=3] [ref=f2e232]:
+                      - text: through
+                      - link "Open Collective" [ref=f2e233] [cursor=pointer]:
+                        - /url: https://opencollective.com/selenium
+                - contentinfo [ref=f2e234]:
+                  - generic [ref=f2e236]:
+                    - list [ref=f2e238]:
+                      - listitem "Selenium Linkedin" [ref=f2e239]:
+                        - link "Selenium Linkedin" [ref=f2e240] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/company/4826427/
+                      - listitem "Selenium X" [ref=f2e242]:
+                        - link "Selenium X" [ref=f2e243] [cursor=pointer]:
+                          - /url: https://x.com/SeleniumHQ
+                      - listitem "Selenium Community YouTube Channel" [ref=f2e245]:
+                        - link "Selenium Community YouTube Channel" [ref=f2e246] [cursor=pointer]:
+                          - /url: https://www.youtube.com/@SeleniumHQProject/
+                      - listitem "Selenium Mastodon" [ref=f2e248]:
+                        - link "Selenium Mastodon" [ref=f2e249] [cursor=pointer]:
+                          - /url: https://mastodon.social/@seleniumHQ@fosstodon.org
+                      - listitem "Selenium BlueSky" [ref=f2e251]:
+                        - link "Selenium BlueSky" [ref=f2e252] [cursor=pointer]:
+                          - /url: https://bsky.app/profile/seleniumconf.bsky.social
+                      - listitem "User mailing list" [ref=f2e254]:
+                        - link "User mailing list" [ref=f2e255] [cursor=pointer]:
+                          - /url: https://groups.google.com/group/selenium-users
+                      - listitem "SeleniumConf YouTube Channel" [ref=f2e257]:
+                        - link "SeleniumConf YouTube Channel" [ref=f2e258] [cursor=pointer]:
+                          - /url: https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw
+                    - generic [ref=f2e260]:
+                      - list [ref=f2e261]:
+                        - listitem "Software Freedom Conservancy" [ref=f2e262]:
+                          - link "Software Freedom Conservancy" [ref=f2e263] [cursor=pointer]:
+                            - /url: mailto:selenium@sfconservancy.org
+                        - listitem "GitHub" [ref=f2e265]:
+                          - link "GitHub" [ref=f2e266] [cursor=pointer]:
+                            - /url: https://github.com/seleniumhq/selenium
+                        - listitem "Slack" [ref=f2e268]:
+                          - link "Slack" [ref=f2e269] [cursor=pointer]:
+                            - /url: https://inviter.co/seleniumhq
+                        - listitem "IRC" [ref=f2e271]:
+                          - link "IRC" [ref=f2e272] [cursor=pointer]:
+                            - /url: https://web.libera.chat/#selenium
+                        - listitem "Developer mailing list" [ref=f2e274]:
+                          - link "Developer mailing list" [ref=f2e275] [cursor=pointer]:
+                            - /url: https://groups.google.com/g/selenium-developers
+                      - link [ref=f2e277] [cursor=pointer]:
+                        - /url: https://www.netlify.com
+                        - img "Deploys by Netlify" [ref=f2e278]
+                    - generic [ref=f2e279]:
+                      - text: © 2026 Software Freedom Conservancy All Rights Reserved
+                      - paragraph [ref=f2e280]:
+                        - link "About Selenium" [ref=f2e281] [cursor=pointer]:
+                          - /url: /about/
+    - generic [ref=e39]:
+      - contentinfo [ref=e40]:
+        - complementary [ref=e43]:
+          - generic [ref=e47]:
+            - paragraph [ref=e49]:
+              - link "Learn More" [ref=e50] [cursor=pointer]:
+                - /url: https://linktr.ee/automateNow
+            - paragraph [ref=e52]:
+              - link "About" [ref=e53] [cursor=pointer]:
+                - /url: https://automatenow.io/about/
+      - generic [ref=e55]: © 2020-2026 - automateNow, LLC. All rights reserved.
+  - button "Search Toggler" [expanded] [ref=e58] [cursor=pointer]
+  - link "Go to top" [ref=e60] [cursor=pointer]:
+    - /url: "#body"
+```
+
+# Test source
+
+```ts
+  1  | import {test,expect} from '@playwright/test'
+  2  | 
+  3  | test("Validate dropdown", async({page})=>
+  4  | {
+  5  | await page.goto("https://practice-automation.com/iframes/");
+  6  | const framess=page.frameLocator("iframe-2");
+  7  | //await framess.locator("//a[@class='navbar__item navbar__link'][2]").click();
+> 8  | await page.locator('//span[text ()="Documentation"]').click();
+     |                                                       ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  9  | 
+  10 | })
+```

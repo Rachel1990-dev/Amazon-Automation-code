@@ -17,8 +17,5 @@ await page.locator('//button[contains(text(),"alert box:")]').click();
 
 //confirm alert
                      
-
-
-
 })
 
